@@ -1,0 +1,112 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8ab4f8;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #242424;
+    color: #ffffff;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #646cff;
+    background-color: #2a2a2a;
+  }
+  
+  .form-submit {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #646cff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-submit:hover {
+    background-color: #5757f3;
+  }
+  
+  /* Utility classes */
+  /* Add as needed for future components for consistency and reusability */
+  /* Existing styles from previous section */
+  /* Base styles, form-container, form-group, etc. */
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #202020;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .nav-logo {
+    font-size: 24px;
+    color: #64c864;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #cccccc;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-item:hover,
+  .nav-item:focus {
+    color: #ffffff;
+    background-color: #646cff;
+    border-radius: 4px;
+  }
+  
+  /* Responsive navbar adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-item {
+      text-align: center;
+      padding: 10px;
+    }
+  }

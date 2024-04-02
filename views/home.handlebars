@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Grid View</title>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .card {
+        background-color: #140505;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .card-buttons {
+           position: absolute;
+             bottom: 3px;
+             display: flex;
+    right: 71px;
+    padding-top: 73px;
+    }
+    .card-buttons button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        border: none;
+        
+        background-color: #300505;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card-buttons button:hover {
+    background-color: #fff;
+        color: #300505;
+   
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+    {{#each payload}}
+    <div class="card">
+        <p><strong>Name:</strong> {{this.name}}</p>
+        <p><strong>Contact:</strong> {{this.contact}}</p>
+        <div class="card-buttons">
+            <a href="/contact/{{this._id}}"> <button>View More</button></a>
+            
+           <a href="/contact/edit-contact/{{this._id}}"> <button>Edit</button></a>
+            
+            <form action="/contact/delete-contact/{{this._id}}?_method=DELETE" method="post">
+             <input type="hidden" name="_method" value="DELETE">
+             <button>Delete</button>
+            </form>
+            
+        </div>
+    </div>
+    {{/each}}
+</div>
+</body>
+</html>
